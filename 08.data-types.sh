@@ -16,5 +16,5 @@ echo "Number of characters in LEADERS string is: ${#LEADERS}"
 
 PEOPLE=("gandhi" "mandela" "martin luther king jr" "jawaharlal nehru")
 #to get number of elements in an array
-echo "Number of elements in PEOPLE array is: ${#PEOPLE[@]}"
+echo "Number of elements in PEOPLE array is: ${PEOPLE[@]}"
 
