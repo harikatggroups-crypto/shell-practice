@@ -9,3 +9,10 @@ else
     echo "The number $number is odd."
 fi # its used to close the if statement
     
+
+ # -gt means "greater than"   
+ # -lt means "less than"
+    # -ge means "greater than or equal to"
+    # -le means "less than or equal to"
+    # -ne means "not equal to"
+    
