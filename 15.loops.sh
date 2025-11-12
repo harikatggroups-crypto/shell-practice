@@ -34,5 +34,12 @@ VALIDATECOMMAND(){ #no space should be between validate command and ()
 
 for package in $@ # $@ will take all the arguments passed to the script
 do
- echo "package name is : $package"
+ dnf list installed $package &>>$LOG_FILE  #The command to list all installed packages using DNF
+   #if exit status is 0 means package already installed if ne 0 means not installed
+if [ $? -ne 0 ]; then
+    dnf install $package -y &>>$LOG_FILE #installing the package
+    VALIDATECOMMAND $? "$package" #calling the function to validate installation// Validate if install succeeded
+else
+    echo -e "$Y $package is already installed. Skipping installation."
+fi
 done
