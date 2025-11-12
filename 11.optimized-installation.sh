@@ -24,9 +24,14 @@ VALIDATECOMMAND $? "Nginx" #without calling it will not execute here we called t
 
 dnf install mysql -y
 VALIDATECOMMAND $? "Mysql"
+#ealier i gave mysql at last as mangobd couldnt install it have stopped there only mysql is also not installed so now i changed mysql in middle it have executed
+
+dnf insatll python3 -y
+VALIDATECOMMAND $? "Python3"
 
 dnf install mongodb-mongosh -y
 VALIDATECOMMAND $? "Mongodb" #without calling it will not execute
+#mangodb is not excuted because we didnt add mangodb repository
 
 
  
