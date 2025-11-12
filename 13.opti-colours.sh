@@ -9,19 +9,19 @@ N="\e[0m"  # No Color
 
 USERID=$(id -u) # prints the user id of current user
 if [ $USERID -ne 0 ]; then
-   echo  " $R You must run this script as root user."  
+   echo  -e " $R You must run this script as root user."  #i forgot ot add -e check it 
    exit 1
 fi
 
 VALIDATECOMMAND(){ #no space should be between validate command and ()
     if [ $1 -ne 0 ]; then
-        echo "$B Error: $2 installation failed."
+        echo -e "$B Error: $2 installation failed."
         #ACCORDING to our present code $2 is mysql ,mgodb,ngnix
         exit 1
         
 
     else 
-        echo "$O $2 installed successfully."
+        echo -e "$O $2 installed successfully."
     fi
 }             
 
