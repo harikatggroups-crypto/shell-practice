@@ -22,7 +22,7 @@ done <<< "$DISK_USAGE" # "<<<" string	Read input from a string
 
 echo -e "message Body: $MESSAGE" # -e to get /n as next line 
 
-sh mail.sh "harikadharavath987@gmail.com" "High Disk Usage alert" "High Disk Usage" "$MESSAGE" "$IP_ADDRESS" "DevOps Team"
+sh 22.mail.sh "harikadharavath987@gmail.com" "High Disk Usage alert" "High Disk Usage" "$MESSAGE" "$IP_ADDRESS" "DevOps Team"
 
 
 #TO_ADDRESS=$1
