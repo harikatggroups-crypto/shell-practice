@@ -11,7 +11,7 @@ do
   PARTITION=$(echo $line | awk '{print $7}')  
 
    if [ $USAGE -ge $DISK_THRESHOLD ]; then
-     echo "Alert: High Usage on $PARTITION: $USAGE"
+     echo "Alert: High Disk Usage on $PARTITION: $USAGE"
    fi
       
 done <<< "$DISK_USAGE" # "<<<" string	Read input from a string
